@@ -1,0 +1,9 @@
+.vscode
+.xmake
+build
+test/.godot
+test/addons/spatial_query/bin/windows/~*
+test/addons/spatial_query/bin/windows/*.pdb
+test/addons/spatial_query/bin/windows/*.ilk
+test/addons/spatial_query/bin/windows/*.lib
+test/addons/spatial_query/bin/windows/*.exp
