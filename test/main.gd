@@ -23,8 +23,10 @@ func _draw() -> void:
 		draw_texture_rect(icon, Rect2(pt, 16 * Vector2.ONE), false)
 	for rect in quad_tree.get_all_rects():
 		draw_rect(rect, Color.RED, false, 2.0)
-	#for pt in quad_tree.find_neighbors(mouse_pos, 100, 100):
-		#var value = quad_tree.get_point_at(pt)
-		#var pos = quad_tree.get_position_at(pt)
-		#draw_string(ThemeDB.fallback_font, pos, str(value), HORIZONTAL_ALIGNMENT_LEFT, -1, 16)
+	var radius = 100
+	for pt in quad_tree.find_neighbors(mouse_pos, radius, 100):
+		var value = quad_tree.get_point_at(pt)
+		var pos = quad_tree.get_position_at(pt)
+		draw_string(ThemeDB.fallback_font, pos, str(value), HORIZONTAL_ALIGNMENT_LEFT, -1, 16)
+	draw_circle(mouse_pos, radius, Color.GREEN, false, 2.0)
 	pass
